@@ -1,0 +1,223 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    max-width: 800px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#player-info {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#choices {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#choices button {
+    padding: 12px 20px; /* Slightly larger padding */
+    font-size: 1.1em; /* Slightly larger font */
+    margin: 5px 10px; /* More horizontal margin */
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    min-width: 120px; /* Minimum width for buttons */
+}
+
+#choices button:hover {
+    background-color: #2980b9;
+}
+
+#battle-results {
+    margin-top: 20px;
+    padding: 15px; /* Increased padding */
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Added border-radius */
+    background-color: #f9f9f9; /* Light background for results area */
+}
+
+#battle-results p {
+    margin: 8px 0; /* Increased margin for readability */
+    font-size: 1.05em; /* Slightly larger font */
+}
+
+#battle-results span {
+    font-weight: bold;
+}
+
+#upgrades-section {
+    margin-top: 30px; /* Increased margin for separation */
+    padding-top: 15px; /* Increased padding */
+    border-top: 2px solid #e0e0e0; /* Slightly thicker border */
+}
+
+#upgrades-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.upgrade-item {
+    margin-bottom: 12px; /* Slightly more margin */
+    padding: 12px; /* Slightly more padding */
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc; /* Slightly darker border */
+    border-radius: 5px; /* Consistent border-radius */
+    display: flex; /* For aligning items */
+    justify-content: space-between; /* Space out description and button */
+    align-items: center; /* Vertically align items */
+}
+
+.upgrade-item span {
+    flex-grow: 1; /* Allow span to take available space */
+    margin-right: 10px; /* Space before button */
+}
+
+.upgrade-item button {
+    padding: 8px 12px; /* Adjusted padding for upgrade buttons */
+    font-size: 0.95em; /* Slightly smaller font for upgrade buttons */
+    background-color: #27ae60; /* Green color for buy */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 80px; /* Minimum width */
+}
+
+.upgrade-item button:hover {
+    background-color: #229954;
+}
+
+.upgrade-item button:disabled {
+    background-color: #bdc3c7; /* Grey out when disabled */
+    cursor: not-allowed;
+}
+
+#debug-section {
+    margin-top: 30px;
+    padding: 15px;
+    background-color: #e9e9e9; /* Slightly different background for debug */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#debug-section h2 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#debug-section button {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 8px 12px; /* Consistent padding */
+    font-size: 0.9em;
+    background-color: #7f8c8d; /* Neutral color for debug buttons */
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+#debug-section button:hover {
+    background-color: #6c7a7b;
+}
+
+#player-data-debug-output {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px; /* Added border-radius */
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 0.85em; /* Smaller font for debug output */
+    line-height: 1.4;  /* Improved line spacing */
+}
+
+#equipment-section {
+    margin-top: 20px;
+    padding: 15px; /* Matched padding with upgrades/debug */
+    border-top: 2px solid #e0e0e0; /* Consistent border with upgrades */
+    background-color: #fdfdfd; /* Slightly different background */
+}
+
+#equipment-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#equipment-section p {
+    margin: 8px 0; /* Consistent paragraph margin */
+    font-size: 1em; /* Consistent font size */
+    padding: 5px;
+    border: 1px dashed #eee; /* Light border to distinguish item display areas */
+    background-color: #fff;
+}
+
+#swap-equipment-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 0.95em;
+    background-color: #e67e22; /* Orange color for swap */
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+#swap-equipment-button:hover {
+    background-color: #d35400;
+}
+#swap-equipment-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+
+/* Placeholder for future button styling (general button, if #choices button is too specific) */
+/*
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+*/
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
