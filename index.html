@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけんクリッカー</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>じゃんけんクリッカー</h1>
+
+        <div id="player-info">
+            Janken Spirit: <span id="janken-spirit-display">0</span>
+        </div>
+
+        <div id="choices">
+            <button id="rock-button">グー (Rock)</button>
+            <button id="paper-button">パー (Paper)</button>
+            <button id="scissors-button">チョキ (Scissors)</button>
+        </div>
+
+        <div id="battle-results">
+            <p>Player chose: <span id="player-choice-display">-</span></p>
+            <p>Opponent chose: <span id="opponent-choice-display">-</span></p>
+            <p>Outcome: <span id="outcome-display">-</span></p>
+            <p>Spirit Gained: <span id="spirit-gained-display">0</span></p>
+        </div>
+
+        <div id="upgrades-section">
+            <h2>アップグレード (Upgrades)</h2>
+            <div class="upgrade-item">
+                <span id="spirit-per-win-display">Upgrade description and cost shows here</span>
+                <button id="buy-spirit-per-win-button">購入 (Buy)</button>
+            </div>
+        </div>
+
+        <div id="debug-section">
+            <h2>デバッグ情報 (Debug Info)</h2>
+            <button id="manual-save-button">手動セーブ (Manual Save)</button>
+            <button id="reset-data-button">データリセット (Reset Data)</button>
+            <pre id="player-data-debug-output"></pre>
+        </div>
+        <!-- More UI elements will be added here -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
