@@ -1,0 +1,198 @@
+/* General Body and Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+main {
+    max-width: 900px;
+    width: 95%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+    border-radius: 8px;
+}
+
+section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+h2 {
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+/* Game Area */
+#player-choices button {
+    padding: 12px 20px;
+    font-size: 1.1em;
+    margin: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    min-width: 120px;
+}
+#player-choices button:hover {
+    background-color: #2980b9;
+}
+
+#results-area p {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+#results-area span {
+    color: #e74c3c;
+}
+
+/* Stats Area */
+#stats-area p {
+    font-size: 1.05em;
+    margin: 5px 0;
+}
+#stats-area span {
+    font-weight: bold;
+    color: #27ae60;
+}
+#tensei-tokens-display { /* Specific style for tensei tokens if needed */
+    color: #8e44ad; /* Purple for Tensei tokens */
+}
+
+
+/* Upgrades Area */
+.upgrade-item {
+    margin-bottom: 12px;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    justify-content: space-between;
+    align-items: center;
+}
+.upgrade-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    width: 100%; /* Full width for name */
+}
+.upgrade-item p {
+    margin: 3px 0;
+    flex-basis: 200px; /* Give some base width to text elements */
+}
+.upgrade-item button {
+    padding: 8px 12px;
+    font-size: 0.95em;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 80px;
+    margin-left: 10px; /* Space from text elements */
+}
+.upgrade-item button:hover {
+    background-color: #229954;
+}
+.upgrade-item button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+/* Equipment Section */
+#equipment-section h2 { /* Already covered by general h2 */ }
+#equipment-display ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#equipment-display li {
+    background-color: #e9f5ff;
+    border: 1px solid #aed6f1;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+/* Game Log Area */
+#log-area h2 { /* Already covered */ }
+#game-log-list {
+    border: 1px solid #ccc;
+    background-color: #fdfdfd;
+    padding: 10px;
+    height: 150px;
+    overflow-y: scroll;
+    border-radius: 4px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+#game-log-list p {
+    margin: 0 0 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #eee;
+}
+#game-log-list p:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+
+/* Footer and Action Buttons */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    background-color: #ecf0f1;
+    width: 100%;
+}
+footer button {
+    padding: 10px 15px;
+    font-size: 1em;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+#save-button { background-color: #3498db; }
+#save-button:hover { background-color: #2980b9; }
+#load-button { background-color: #f1c40f; color: #333; } /* Load usually less prominent or different action */
+#load-button:hover { background-color: #e1b30d; }
+#reset-button { background-color: #e74c3c; }
+#reset-button:hover { background-color: #c0392b; }
+#tensei-button { background-color: #8e44ad; }
+#tensei-button:hover { background-color: #732d91; }
+
+/* Utility classes */
+.hidden {
+    display: none !important;
+}
