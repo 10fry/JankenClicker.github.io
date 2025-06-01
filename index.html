@@ -1,48 +1,70 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>じゃんけんクリッカー</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Janken Clicker Wars - TypeScript</title>
+    <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
-    <div id="game-container">
-        <h1>じゃんけんクリッカー</h1>
+    <header>
+        <h1>Janken Clicker Wars</h1>
+    </header>
 
-        <div id="player-info">
-            Janken Spirit: <span id="janken-spirit-display">0</span>
-        </div>
-
-        <div id="choices">
-            <button id="rock-button">グー (Rock)</button>
-            <button id="paper-button">パー (Paper)</button>
-            <button id="scissors-button">チョキ (Scissors)</button>
-        </div>
-
-        <div id="battle-results">
-            <p>Player chose: <span id="player-choice-display">-</span></p>
-            <p>Opponent chose: <span id="opponent-choice-display">-</span></p>
-            <p>Outcome: <span id="outcome-display">-</span></p>
-            <p>Spirit Gained: <span id="spirit-gained-display">0</span></p>
-        </div>
-
-        <div id="upgrades-section">
-            <h2>アップグレード (Upgrades)</h2>
-            <div class="upgrade-item">
-                <span id="spirit-per-win-display">Upgrade description and cost shows here</span>
-                <button id="buy-spirit-per-win-button">購入 (Buy)</button>
+    <main>
+        <section id="game-area">
+            <div id="player-choices">
+                <button id="rock-button">Rock</button>
+                <button id="paper-button">Paper</button>
+                <button id="scissors-button">Scissors</button>
             </div>
-        </div>
+            <div id="results-area">
+                <p>Your choice: <span id="player-choice-display">-</span></p>
+                <p>Opponent's choice: <span id="opponent-choice-display">-</span></p>
+                <p>Outcome: <span id="outcome-display">-</span></p>
+            </div>
+        </section>
 
-        <div id="debug-section">
-            <h2>デバッグ情報 (Debug Info)</h2>
-            <button id="manual-save-button">手動セーブ (Manual Save)</button>
-            <button id="reset-data-button">データリセット (Reset Data)</button>
-            <pre id="player-data-debug-output"></pre>
-        </div>
-        <!-- More UI elements will be added here -->
-    </div>
-    <script src="script.js"></script>
+        <section id="stats-area">
+            <h2>Stats</h2>
+            <p>Janken Spirit: <span id="janken-spirit-display">0</span></p>
+            <p>Tensei Tokens: <span id="tensei-tokens-display">0</span></p>
+            <p>Total Wins: <span id="total-wins-display">0</span></p>
+            <p>Total Losses: <span id="total-losses-display">0</span></p>
+            <p>Total Draws: <span id="total-draws-display">0</span></p>
+        </section>
+
+        <section id="upgrades-area">
+            <h2>Upgrades</h2>
+            <div id="upgrades-list">
+                <!-- Upgrades will be populated here by JavaScript -->
+            </div>
+        </section>
+
+        <section id="equipment-section">
+            <h2>Equipment</h2>
+            <div id="equipment-display">
+                <!-- Equipment will be populated here by JavaScript -->
+                <p>Nothing equipped.</p>
+            </div>
+        </section>
+
+        <section id="log-area">
+            <h2>Game Log</h2>
+            <div id="game-log-list">
+                <!-- Game messages will appear here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Janken Clicker Wars - TypeScript Version</p>
+        <button id="save-button">Save Game</button>
+        <button id="load-button">Load Game (Refresh after load)</button>
+        <button id="reset-button">Reset Game Data</button>
+        <button id="tensei-button">Tensei</button>
+    </footer>
+
+    <script type="module" src="dist/main.js"></script>
 </body>
 </html>

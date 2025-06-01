@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "lib": ["es2016", "dom"] // Added "es2016" for Array.includes and "dom" for localStorage/console
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules", // Good practice to explicitly exclude
+    "src/App.tsx",  // Exclude React specific files for now
+    "src/index.tsx" // Exclude React specific files for now
+  ]
+}
